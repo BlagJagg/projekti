@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        // Get the Rigidbody component of the player and print an error message if it's missing
+        // Get the Rigidbody component of the player and print an error message if it's missing (for debugging)
         _playerRigidbody = GetComponent<Rigidbody2D>();
         if (_playerRigidbody == null)
         {
