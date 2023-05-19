@@ -4,41 +4,47 @@ using UnityEngine;
 
 public class PlatformManager : MonoBehaviour
 {
-    public GameObject platformPrefab;
-    public float platformSpawnInterval = 2f;
-    public float platformMinY = -4f;
-    public float platformMaxY = 4f;
-    public float platformMinX = -4f;
-    public float platformMaxX = 4f;
+    public GameObject platformPrefab;          // Prefab of the platform to be spawned
+    public float platformSpawnInterval = 2f;   // Interval between platform spawns
+    public float platformMinY = -4f;          // Minimum Y position for platform spawn
+    public float platformMaxY = 4f;           // Maximum Y position for platform spawn
+    public float platformMinX = -4f;          // Minimum X position for platform spawn
+    public float platformMaxX = 4f;           // Maximum X position for platform spawn
 
-    private float timer;
-    private Vector2 lastPlatformPosition;
+    private float timer;                    // Timer for platform spawning
+    private Vector2 lastPlatformPosition;   // Position of the last spawned platform
 
     void Start()
     {
-        timer = platformSpawnInterval;
-        lastPlatformPosition = transform.position;
+        timer = platformSpawnInterval;                // Initialize the timer
+        lastPlatformPosition = transform.position;    // Set the last platform position to the initial position of the PlatformManager
     }
 
     void Update()
     {
-        timer -= Time.deltaTime;
+        timer -= Time.deltaTime;      // Decrease the timer by the elapsed time
 
         if (timer <= 0f)
         {
-            SpawnPlatform();
-            timer = platformSpawnInterval;
+            SpawnPlatform();                    // Call the SpawnPlatform() function when the timer reaches zero
+            timer = platformSpawnInterval;      // Reset the timer to the specified interval
         }
     }
 
     void SpawnPlatform()
     {
+        // Calculate a random X position within the specified range
         float posX = Random.Range(platformMinX, platformMaxX);
+        // Calculate a random Y position relative to the last spawned platform
         float posY = lastPlatformPosition.y + Random.Range(platformMinY, platformMaxY);
 
+        // Instantiate a new platform using the prefab at the calculated position
         GameObject newPlatform = Instantiate(platformPrefab, new Vector2(posX, posY), Quaternion.identity);
+        // Set the PlatformManager as the parent of the new platform
         newPlatform.transform.SetParent(transform);
 
+        // Update the last platform position to the position of the newly spawned platform
         lastPlatformPosition = newPlatform.transform.position;
+
     }
 }
