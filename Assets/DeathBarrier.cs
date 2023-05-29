@@ -3,15 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class DeathBarrier : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    [SerializeField] private float deathYLevel = -10f;
 
-    private void OnCollisionEnter(Collision col)
+    private void Update()
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (transform.position.y < deathYLevel)
         {
-            Debug.Log("DAAAAAAAA");
-            SceneManager.LoadScene("spawn");
-            Destroy(player);
+            SceneManager.LoadScene("Menu");
         }
     }
 }
