@@ -23,8 +23,8 @@ public class ScoreManager : MonoBehaviour
         // Get the current Y position of the player
         float newCurrentYPosition = player.position.y;
 
-        // If the new position is lower than the current position, update the current position
-        if (newCurrentYPosition < currentYPosition)
+        // If the new position is higher than the current position, update the current position
+        if (newCurrentYPosition > currentYPosition)
         {
             currentYPosition = newCurrentYPosition;
         }
