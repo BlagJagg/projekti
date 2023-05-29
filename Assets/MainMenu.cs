@@ -22,8 +22,8 @@ public class MainMenu : MonoBehaviour
         style.fontSize = 24;
 
         // Set the text color of the style to the specified color
-        Color textColor = new Color(0.784f, 0.678f, 0.482f); // RGB values for c8ad7b
-        style.normal.textColor = textColor;
+
+        style.normal.textColor = Color.white;
 
         // Get the high score from PlayerPrefs
         int highScore = PlayerPrefs.GetInt("HighScore", 0);
