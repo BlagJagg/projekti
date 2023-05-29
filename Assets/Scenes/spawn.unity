@@ -242,6 +242,8 @@ MonoBehaviour:
   platformMaxY: 15
   platformMinX: 3
   platformMaxX: 20
+  platformMovementRange: 2
+  platformMovementSpeed: 30
 --- !u!4 &436468420
 Transform:
   m_ObjectHideFlags: 0
