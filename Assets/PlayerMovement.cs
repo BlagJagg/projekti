@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
 
     private System.Collections.IEnumerator EnableJumpAfterDelay()
     {
-        yield return new WaitForSeconds(0.5f); // Set the desired delay here (in seconds)
+        yield return new WaitForSeconds(1.5f); // Set the desired delay here (in seconds)
         _canJump = true; // Enable jumping after the delay
     }
 }

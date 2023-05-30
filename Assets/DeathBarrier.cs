@@ -10,7 +10,6 @@ public class DeathBarrier : MonoBehaviour
     {
         if (player.transform.position.y < deathYLevel) // Check if player's Y position is below the deathYLevel
         {
-            Destroy(player); // Delete the player object
             SceneManager.LoadScene("Menu"); // Load the "Menu" scene
         }
     }
