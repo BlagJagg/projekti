@@ -1182,6 +1182,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3550646561812338786, guid: 3d26d4fee97ffe54981987eaf37515fd, type: 3}
+      propertyPath: playerSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550646561812338786, guid: 3d26d4fee97ffe54981987eaf37515fd, type: 3}
       propertyPath: fallMultiplier
       value: 4
       objectReference: {fileID: 0}
@@ -1193,9 +1197,21 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.0009508133
       objectReference: {fileID: 0}
+    - target: {fileID: 3550646561812338797, guid: 3d26d4fee97ffe54981987eaf37515fd, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 8bf0239287763004981ab0990a5d57a7, type: 2}
+    - target: {fileID: 3550646561812338797, guid: 3d26d4fee97ffe54981987eaf37515fd, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3550646561812338798, guid: 3d26d4fee97ffe54981987eaf37515fd, type: 3}
       propertyPath: m_Name
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550646561812338798, guid: 3d26d4fee97ffe54981987eaf37515fd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3550646561812338799, guid: 3d26d4fee97ffe54981987eaf37515fd, type: 3}
       propertyPath: m_RootOrder
