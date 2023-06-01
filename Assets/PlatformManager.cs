@@ -6,10 +6,10 @@ public class PlatformManager : MonoBehaviour
 {
     public GameObject platformPrefab;          // Prefab of the platform to be spawned
     public float platformSpawnInterval = 2f;   // Interval between platform spawns
-    public float platformMinY = -4f;          // Minimum Y position for platform spawn
-    public float platformMaxY = 4f;           // Maximum Y position for platform spawn
-    public float platformMinX = -4f;          // Minimum X position for platform spawn
-    public float platformMaxX = 4f;           // Maximum X position for platform spawn
+    public float platformMinY = -1f;          // Minimum Y position for platform spawn
+    public float platformMaxY = 2f;           // Maximum Y position for platform spawn
+    public float platformMinX = -1f;          // Minimum X position for platform spawn
+    public float platformMaxX = 2f;           // Maximum X position for platform spawn
 
     private float timer;                    // Timer for platform spawning
     private Vector2 lastPlatformPosition;   // Position of the last spawned platform
